@@ -1,0 +1,98 @@
+.todoInput{
+    width: 80%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.todoInput input{
+    width: 40%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    flex: 1;
+}
+
+.todoInput button{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    margin: 20px;
+}
+
+@media (max-width: 600px) {
+    .todoInput {
+        flex-direction: column; /* Elemeken belüli oszlopos elrendezés mobilon */
+        align-items: center; /* Elemet teljes szélességűvé teszi */
+        width: 95%; /* Teljes szélességű elemek */
+    }
+
+    .todoInput input,
+    .todoInput button {
+        width: 90%; /* Teljes szélességű elemek */
+        margin: 10px; /* Felső és alsó margó */
+        align-items: center; /* Elemet teljes szélességűvé teszi */
+    }
+}
+
+.todoListItem{
+    display: flex;
+    margin: 10px;
+    width: 80%;
+}
+
+.deleteButton{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+.deleteButton:hover{
+    background-color: #ff0000;
+}
+
+.sendToCalendarButton{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #2196F3;
+    color: white;
+    cursor: pointer;
+}
+
+.sendToCalendarButton:hover{
+    background-color: #007bff;
+}
+
+.taskText{
+    width:  50%;
+    font-size: 16px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+    color: rgb(0, 0, 0);
+}
+
+.taskDate{
+    font-size: 16px;
+    padding: 10px;
+    font-size: 16px;
+    border-right: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-top: 1px solid #000000;
+    color: rgb(0, 0, 0);
+}
