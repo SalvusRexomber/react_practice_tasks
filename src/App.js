@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import './App.css';
-import TodoList from './Tasks/TodoList'; // Importáld a First komponenst
+import TodoList from './Tasks/TodoList/TodoList'; // Importáld a First komponenst
+import CounterButton from './Tasks/CounterButton/CounterButton'; // Importáld a Second komponenst
 
 function Home() {
   const navigate = useNavigate();
@@ -10,6 +11,7 @@ function Home() {
     <div className="App">
       <h1>The tasks on this website are based on ideas from <a href="https://medium.com/@rohan.fulzele/50-beginner-and-intermediate-level-react-project-ideas-%EF%B8%8F-809b396faa39">Rohan Fulzele's article on Medium.</a></h1>
       <button onClick={() => navigate("/tasks/todolist")} type="button"> Task 1 </button>
+      <button onClick={() => navigate("/tasks/counterbutton")} type="button"> Task 2 </button>
     </div>
   );
 }
@@ -19,7 +21,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/tasks/todolist" element={<TodoList />} />
+        <Route path="/Tasks/TodoList" element={<TodoList />} />
+        <Route path="/Tasks/CounterButton" element={<CounterButton />} />
       </Routes>
     </Router>
   );
