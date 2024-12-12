@@ -1,12 +1,47 @@
 
-.buttoncontainer {
-
-    display: flex;
+.outerdivider{
+  display:grid;
   justify-content: center;
   margin-top: 20px;
+  align-items: center;
+  background-color:brown;
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  margin: 10px auto;
+  align-items: center;
+  border: 1px solid black;
+}
+.backtomain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellowgreen;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  margin: 10px;
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.buttoncontainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  align-items: center;
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  margin: 10px auto;
+  align-items: center;
+  border: 1px solid black;
   button {
-    margin: 0 10px;
+    align-items: center;
+    margin: 10px;
     color: red;
+    cursor: pointer;
   }
   count{
     display: flex;

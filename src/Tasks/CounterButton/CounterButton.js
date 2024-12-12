@@ -11,10 +11,14 @@ function Button() {
     };
 
     return (
-        <div className="buttoncontainer"> 
-            <button className="button" onClick={handleClick}>Click me!</button>
-            <p className="count">You clicked {count} times</p>
+        <div className="outerdivider">
+            <div className="buttoncontainer"> 
+                <button className="button" onClick={handleClick}>Click me!</button>
+                <p className="count">You clicked {count} times</p>
+                <button className="button" onClick={() => setCount(0)}>Reset</button>
 
+            </div>
+            <button className="backtomain" onClick={() => window.location.href = "/"}>Back to the main page</button>
         </div>
     );
 };
