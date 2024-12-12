@@ -1,0 +1,17 @@
+.textdisplaycontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
