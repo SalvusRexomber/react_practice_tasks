@@ -96,3 +96,9 @@
     border-top: 1px solid #000000;
     color: rgb(0, 0, 0);
 }
+
+.errorMessages{
+    color: red;
+    font-size: 16px;
+    margin: 10px;
+}

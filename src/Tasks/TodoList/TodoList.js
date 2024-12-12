@@ -6,20 +6,27 @@ import { gapi } from "gapi-script";
 
 function TodoList() {
 
-/* Google Calendar API LOGICS*/
-function handleSendToCalendar(e) {
-  return;
-};
+  const CLIENT_ID = "YOUR_CLIENT_ID";
+  const API_KEY = "YOUR_API_KEY";
+  const SCOPES = "https://www.googleapis.com/auth/calendar.events";
+  const DISCOVERY_DOC = "https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest";
 
-  
-/* Google Calendar API END */
-
-
+  /* Google Calendar API END */
 
   const [tasks, setTasks] = useState([]);
   const [taskInput, setTaskInput] = useState("");
   const [taskDate, setTaskDate] = useState("");
+  const [errormessage, setErrorMessage] = useState("");
   let navigate = useNavigate();
+
+
+  async function handleSendToCalendar(task) {
+    const errormessage = "This is not a functional button yet. Please check back later.";
+    setErrorMessage(errormessage);
+    
+    /*alert(errormessage);*/
+
+  }
 
   function deleteTask(id) {
     setTasks(tasks.filter((task) => task.id !== id));
@@ -74,6 +81,7 @@ function handleSendToCalendar(e) {
               <span className="taskDate">{task.date}</span>
               <button className="deleteButton" onClick={() => deleteTask(task.id)}>Delete</button>
               <button className="sendToCalendarButton" onClick={() => handleSendToCalendar(task)}>Send to Calendar</button>
+              <span className="errorMessages">{errormessage}</span>
             </li>
           ))}
         </ul>
